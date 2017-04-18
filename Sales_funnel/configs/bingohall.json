@@ -1,0 +1,27 @@
+{
+
+  "content":{
+      "homepage": "lead",
+      "emaildoc": {
+          "subject": "test ✔",
+          "text": "",
+          "path": {
+            "root": "LANDING_DOMAIN_PATH",
+            "to": "/bingohall/docs/"
+          },
+          "attachments": [
+            {
+              "filename": "test.pdf",
+              "contentType": "application/pdf"
+            }
+          ],
+          "html": {
+            "root": "LANDING_DOMAIN_PATH",
+            "path": "/bingohall/docs/",
+            "name": "5_возможностей_лотерейного_бизнеса.Вступление.html"
+          }
+        },
+      "success_notify": "Мы отправили «test» на ваш почтовый ящик"
+      }
+
+}

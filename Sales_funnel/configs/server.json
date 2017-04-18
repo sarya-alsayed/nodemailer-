@@ -1,0 +1,104 @@
+{
+  "database": {
+    "type": "postgres",
+    "rolename": "businessman",
+    "password": "123456789",
+    "address": "localhost",
+    "name": "funnel_of_sales"
+  },
+  "database_roles": [
+    "superadmin",
+    "operating"
+  ],
+  "mongodb": {
+    "url": "mongodb://localhost/funnel-admin",
+    "ttl": 3600,
+    "autoRemove": "native"
+  },
+  "session": {
+    "secret": "ABCJSJ-LSALSLAL-5S4A5S5-OOVPP",
+    "key": "sid",
+    "resave": true,
+    "saveUninitialized": true
+  },
+  "ga":{
+    "tracking_id": "UA-83788115-1"
+  },
+  "smtp": {
+    "pool": true,
+    "host": "smtp.zoho.com",
+    "port": 587,
+    "auth": {
+      "user": "sarya.alsayed@dot.market",
+      "pass": "abcd1234"
+    },
+    "sender": "Spring-T InfoCenter <sarya.alsayed@dot.market>"
+  },
+  "mail_dest": {
+    "roles": {
+      "marketer": {
+        "recipients": [
+          "sarya.alsayed@dot.market"
+        ]
+      },
+      "technical_support": {
+        "recipients": [
+          "developer@konazhak.kz"
+        ]
+      }
+    }
+  },
+  "shop": {
+    "currency": {
+      "398": "KZT",
+      "840": "USD"
+    },
+    "order_types": {
+      "purchase": "purchase",
+      "bid": "bid"
+    },
+    "order_statuses": {
+      "PENDING": "pending",
+      "CONFIRMATION": "confirmation",
+      "PAID": "paid"
+    },
+    "order_max_digits": 10,
+    "payment_blank": {
+      "postconnection": {
+        "hostname": "",
+        "port": 443,
+        "path": "",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Length": ""
+        },
+        "rejectUnauthorized": true,
+        "requestCert": true,
+        "agent": false
+      },
+      "postform": {
+        "Signed_Order_B64": "",
+        "email": "",
+        "Language": "",
+        "BackLink": "https://",
+        "PostLink": "https://",
+        "FailureBackLink": "https://",
+        "FailurePostLink": "https://"
+      }
+    }
+  },
+  "langs": [
+    "rus",
+    "kaz",
+    "eng"
+  ],
+  "landing": {
+    "classes": [
+      "lead",
+      "cheap-product",
+      "coreoffer",
+      "backoffer"
+    ]
+  }
+}

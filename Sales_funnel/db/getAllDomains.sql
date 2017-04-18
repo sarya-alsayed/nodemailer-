@@ -1,0 +1,1 @@
+select d.id, d.url from domains d

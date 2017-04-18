@@ -1,0 +1,91 @@
+/**
+ * Created by daulet on 7/7/16.
+ */
+var nodemailer = require('nodemailer'),
+    inlineBase64 = require('nodemailer-plugin-inline-base64'),
+    q = require('q'),
+    ServerError = require('./../error/server_error').ServerError;
+
+module.exports = {
+
+    init: function (poolConfig) {
+        this.transport = nodemailer.createTransport(poolConfig);
+    },
+    
+    send: function (mailOptions, compileBase64){
+	console.log("##############################################")
+        function makeid()
+{
+        
+
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    console.log("##############################################",text)
+//document.getElementById("demo").innerHTML = text;
+return text;
+}
+//makeid();
+
+var massag = `"<!doctype html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+       #logo{
+        margin-left:20px;
+       }    
+       p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;        
+        text-indent: 20px; /* Отступ первой строки в пикселах */
+         line-height: 1.5;  
+       }
+       .center { text-align: center; }
+       i {
+        padding-left: 20px; /* Отступ первой строки в пикселах */
+       }
+   </style>
+</head>
+
+<body>
+
+    <div id="logo"><img src="job_market_logo.png" width="150" height="60"></div>`+ makeid()
+ +`"Register with us to enter the real business world Job.market will save your time. effort. thinking. invest your time
+Job.market is here to help you to build your future career 
+
+How does it work? How much does it cost? Is this really going to help me?
+Yes, we are here to help you... Jest join us! Now you will forget all your worries with JOB.MARKET 
+⦁ Today you can follow our C.V builder to build your professional C.V by FREE, it's easy by adding your email address you will receive our promo code then insert this code to our C.V builder to start your career in a professional way, which cost 50$... ONLY today you can get it FREE.. enjoy with us
+⦁ Withen 4 easy steps you can enter JOB.MARKET world to create your professional C.V 
+⦁ Only in JOB.MARKET you can find 6 different designs, frameworks, themes, many colors, just apply your favorited design in one click you can get your professional resume
+    
+</body>
+</html>"`             
+        var defer = q.defer();
+        if(!this.transport) {
+            defer.reject(new ServerError(new Date(), "Configs for smtp transport protocol is undefined!",
+                ServerError.SERVER_ERROR_ENUMS.SMTP_ERROR));
+        }
+        else {
+            if(compileBase64)
+                this.transport.use('compile', inlineBase64);
+            this.transport.sendMail(mailOptions, function (err, responseStatus) {
+                if (err) {
+                    console.error("ERROR: Mailer Module Say:", err);
+                    var post = "An error occurred while sending the e-mail letter to the postal address:" + mailOptions.to;
+                    defer.reject(new ServerError(new Date(), post, ServerError.SERVER_ERROR_ENUMS.SMTP_ERROR));
+                } else {
+                    console.log("INFO: Mail Response Status=>", responseStatus);
+                    console.log('INFO: Mail has been sent successfully');
+                    defer.resolve(mailOptions.notify_msg);
+                }
+            });
+        }
+
+        return defer.promise;
+    }
+
+};

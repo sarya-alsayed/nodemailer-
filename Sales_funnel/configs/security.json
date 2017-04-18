@@ -1,0 +1,24 @@
+{
+  "epay": {
+    "storage_location": "/www/security/epay",
+    "test":{
+        "key_storage" :{
+          "BANK_PUBLIC_KEY" : "rootCA1.pem",
+          "OWN_PRIVATE_KEY" : "test_prv.pem",
+          "OWN_PUBLIC_KEY" : "test_pub.pem",
+          "PASSPHRASE": "nissan"
+        }
+    },
+    "full":{
+      "key_storage" :{
+        "BANK_PUBLIC_KEY" : "kkbca.pem",
+        "OWN_PRIVATE_KEY" : "cert.prv",
+        "OWN_PUBLIC_KEY" : "cert.pub",
+        "PASSPHRASE": "WDfUveEf9i3"
+      }
+    }
+
+  }
+
+
+}

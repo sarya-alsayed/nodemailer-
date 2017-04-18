@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/bingohall/css/bootstrap.min.css" type="text/css">
+    <!-------------- Custom Fonts --------------->
+    <!-- Custom CSS -->
+</head>
+<style>
+    html,body{
+        font-size: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contacts{
+        padding-top: 0.65%;
+        text-align: right;
+        line-height: 70%;
+    }
+
+    .contacts p{
+        color: black;
+        font-size: 1em;
+    }
+    .head_logo{
+        width: 100%;
+        padding-left: 1%;
+    }
+    #logo{
+        padding-top: 2%;
+
+        width: 150px;
+        margin-bottom: 1%;
+    }
+    .grabber {
+        text-align: center;
+        color: white;
+        background: rgb(55, 92, 128);
+    }
+    .grabber p{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        text-shadow: 1px 1px black;
+        font-size: 2.5em;
+        line-height: 90%;
+    }
+    .info_text{
+        text-align: justify;
+        padding-top: 1%;
+        width: 80%;
+        margin-left: 10%;
+    }
+    a{
+        font-size: 1.5em;
+    }
+    .info_text p{
+        font-size: 1.5em;
+
+        line-height: 100%;
+    }
+    .footer {
+        width: 100%;
+        padding-bottom: 1%;
+        height: 200px;
+        text-align: center;
+        background: url("/bingohall/img/_svg.png") no-repeat;
+        background-size: 100% 100%;
+
+    }
+
+    #footer_info {
+        margin-left: -15%;
+        padding-top: 10%;
+
+    }
+
+    .about img {
+        content: url('/bingohall/img/текст_2.png');
+        width: 8%;
+    }
+
+    .about img:hover {
+        content: url('/bingohall/img/текст_4.png');
+    }
+    .about img:after {
+        content: url('/bingohall/img/текст_2.png');
+        width: 40%;
+    }
+    .about img:hover:after {
+
+        content: url('/bingohall/img/текст_4.png');
+    }
+
+    @media screen and (max-width: 1240px) and (min-width: 1024px){
+        .list{
+            margin-left: 13%;
+        }
+    }
+    @media screen and (max-width: 1520px) and (min-width: 1241px){
+        .list{
+            margin-left: 22%;
+        }
+    }
+    @media screen and (max-width: 1980px) and (min-width: 1521px){
+        .list{
+            margin-left: 28%;
+        }
+    }
+
+    @media screen and (max-width: 540px) and (min-width: 320px) {
+        .contacts p {
+            font-size: 0.65em;
+            line-height: 100%;
+            margin-bottom: 0;
+
+        }
+        .head_logo{
+            padding-bottom: 1%;
+        }
+        #logo{
+            width: 100px;
+        }
+        .grabber p{
+            padding-top: 3%;
+            font-size: 1.5em;
+        }
+        .info_text p{
+            padding-top: 2%;
+            font-size: 1em;
+        }
+        .about img {
+            width: 25%;
+        }
+    }
+    @media screen and (max-width: 639px) and (min-width: 541px){
+        .about img {
+            width: 20%;
+        }
+    }
+
+    @media screen and (max-width: 780px) and (min-width: 640px){
+        .about img {
+            width: 18%;
+        }
+    }
+    @media screen and (max-width: 879px) and (min-width: 781px){
+        .about img {
+            width: 18%;
+        }
+    }
+
+    @media screen and (max-width: 994px) and (min-width: 881px){
+        .about img {
+            width: 15%;
+        }
+    }
+</style>
+<body>
+<div class="row head_logo">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <img src="/bingohall/img/logo_blue.svg" id="logo">
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 contacts">
+        <p>050042, Алматы, Казахстан, </p>
+
+        <p>Таугуль, 19, офис 60</p>
+
+        <p>+7(727)381 13 44, info@spring-t.kz</p>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row grabber">
+        <p>Технические неполадки</p>
+    </div>
+    <div class="row info_text">
+        <a href="/" style="margin-left: -10%;">На главную</a>
+        <p style="padding-top:2%;">Доводим до вашего сведения, что в связи с техническими проблемами не работают
+            процедуры по проведению платежей.</p>
+        <p style="padding-top:2%;">Приносим Вам свои извинения за временные неудобства!</p>
+    </div>
+    </div>
+
+</div>
+
+<div class="row" style="bottom:0;position: absolute;width: 100%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer" style="height: 100%;padding-left: 15%">
+        <div class="row" id="footer_info">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a href="#" class="about">
+                    <img>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
